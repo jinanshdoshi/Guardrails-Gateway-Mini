@@ -4,8 +4,8 @@ import json
 import os
 
 API_URL = os.getenv("API_BASE_URL", "http://localhost:8000") + "/analyze"
-st.set_page_config(page_title="Guardrails Gateway", page_icon="🛡️")
-st.title("🛡️ SentraGuard Lite")
+st.set_page_config(page_title="Guardrails Gateway")
+st.title("SentraGuard Lite")
 st.write("Minimal GenAI Guardrails Gateway")
 
 with st.container():
@@ -44,11 +44,11 @@ if submit_btn:
                     col3.write(f"**Tags:** {', '.join(result['risk_tags']) if result['risk_tags'] else 'None'}")
                     
                     if decision == "block":
-                        st.error(f"🛑 Request Blocked! Score: {score}")
+                        st.error(f"Request Blocked! Score: {score}")
                     elif decision == "transform":
-                        st.warning(f"⚠️ Content Modified (PII Redacted)")
+                        st.warning(f"Content Modified (PII Redacted)")
                     else:
-                        st.success("✅ Content Safe")
+                        st.success("Content Safe")
                     st.subheader("Output")
                     if result.get("sanitized_prompt"):
                         st.text_area("Sanitized Prompt", value=result["sanitized_prompt"], disabled=True)
