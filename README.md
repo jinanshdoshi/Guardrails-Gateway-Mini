@@ -1,4 +1,4 @@
-# Guardrails Gateway Mini (SentraGuard Lite)
+# Guardrails Gateway
 
 A minimal GenAI guardrails gateway that analyzes an incoming prompt + optional retrieved context, returning a policy decision (allow/block/transform).
 
