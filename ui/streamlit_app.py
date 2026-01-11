@@ -5,7 +5,7 @@ import os
 
 API_URL = os.getenv("API_BASE_URL", "http://localhost:8000") + "/analyze"
 st.set_page_config(page_title="Guardrails Gateway", page_icon="🛡️")
-st.title("🛡️ SentraGuard Lite")
+st.title("🛡️ SentraGuard")
 st.write("Minimal GenAI Guardrails Gateway")
 
 with st.container():
