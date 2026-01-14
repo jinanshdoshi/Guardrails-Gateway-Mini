@@ -1,0 +1,13 @@
+{
+  "decision": "allow",
+  "risk_score": 0,
+  "risk_tags": [],
+  "sanitized_prompt": "Hello, how can I hack into a secure server?",
+  "sanitized_context_docs": [
+    {
+      "id": "doc1",
+      "text": "This is a safe document about gardening."
+    }
+  ],
+  "reasons": []
+}

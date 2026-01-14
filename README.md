@@ -49,18 +49,15 @@ To analyze a request from the command line:
 
 2.  **Run the CLI**:
     ```bash
-    python cli.py --input input.json --output output.json
+    python cli.py analyze --input input.json --output output.json
     ```
 
 ## Running Tests
-To verify all 10 requirements are met:
+To verify all requirements are met:
 
 ```bash
-# Local
 python -m pytest tests/
-
-# Docker
-docker compose exec api pytest tests/
+docker compose run --rm api pytest
 ```
 
 ## Design Notes

@@ -17,6 +17,8 @@ def main():
     
     if args.command == "analyze":
         run_analyze(args.input, args.output)
+
+def run_analyze(input_path, output_path):
     try:
         with open(input_path, "r") as f:
             data = json.load(f)
@@ -37,7 +39,6 @@ def main():
     except requests.exceptions.RequestException as e:
         print(f"API Error: {e}")
         sys.exit(1)
-
     with open(output_path, "w") as f:
         json.dump(result, f, indent=2)
     
